@@ -1,0 +1,350 @@
+{
+"1":{
+     "File header record type code":{
+       "start":1,
+       "end":1,
+       "type":"string",
+       "pattern":"1"
+     },
+     "Priority Code":{
+       "start":2,
+       "end":3,
+       "type":"string",
+       "pattern":"01"
+     },
+     "Immediate destination":{
+       "start":4,
+       "end":13,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Immediate origin":{
+       "start":14,
+       "end":23,
+       "type":"string",
+       "pattern":".*"
+     },
+     "File creation date":{
+       "start":24,
+       "end":29,
+       "type":"date",
+       "pattern":"yyMMdd"
+     },
+    "File creation time":{
+       "start":30,
+       "end":33,
+       "type":"date",
+       "pattern":"hhmm"
+     },
+      "File id modifier":{
+       "start":34,
+       "end":34,
+       "type":"string",
+       "pattern":"[A-Z0-9]"
+     },
+     "Record size":{
+       "start":35,
+       "end":37,
+       "type":"number",
+       "pattern":"[0-9]{1,3}"
+     },
+     "Blocking factor":{
+       "start":38,
+       "end":39,
+       "type":"number",
+       "pattern":"[0-9]{1,2}"
+     },
+     "Format code":{
+       "start":40,
+       "end":40,
+       "type":"string",
+       "pattern":"."
+     },
+     "Immediate destination name":{
+       "start":41,
+       "end":63,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Immediate origin name":{
+       "start":64,
+       "end":86,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Reference code":{
+       "start":87,
+       "end":94,
+       "type":"string",
+       "pattern":"[A-Z0-9a-z]{1,8}"
+     }
+    },
+    "5":{
+     "Batch header record type code":{
+       "start":1,
+       "end":1,
+       "type":"string",
+       "pattern":"5"
+     },
+     "Service class Code":{
+       "start":2,
+       "end":4,
+       "type":"string",
+       "pattern":"200|220|225"
+     },
+     "Company name":{
+       "start":5,
+       "end":20,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Company discretion":{
+       "start":21,
+       "end":40,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Company identification":{
+       "start":41,
+       "end":50,
+       "type":"string",
+       "pattern":".*"
+     },
+      "Standard entry class code":{
+       "start":51,
+       "end":53,
+       "type":"string",
+       "pattern":"[a-zA-Z0-9]{1,3}"
+     },
+      "Company entry description":{
+       "start":54,
+       "end":63,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Company descriptive date":{
+       "start":64,
+       "end":69,
+       "type":"date",
+       "pattern":"yyMMdd"
+     },
+     "Effective descriptive date":{
+       "start":70,
+       "end":75,
+       "type":"date",
+       "pattern":"yyMMdd"
+     },
+    "Settlement date":{
+       "start":76,
+       "end":78,
+       "type":"string",
+       "pattern":".*"
+     },
+      "Original status code":{
+       "start":79,
+       "end":79,
+       "type":"string",
+       "pattern":"1"
+     },
+     "Original DFI Identification":{
+       "start":80,
+       "end":87,
+       "type":"number",
+       "pattern":"[0-9]{1,8}"
+     },
+     "Batch number":{
+       "start":88,
+       "end":94,
+       "type":"number",
+       "pattern":"[0-9]{1,7}"
+     }
+    },
+    "6":{
+     "Entry record type code":{
+       "start":1,
+       "end":1,
+       "type":"string",
+       "pattern":"6"
+     },
+     "Transaction Code":{
+       "start":2,
+       "end":3,
+       "type":"number",
+       "pattern":"22|23|24|27|28|29"
+     },
+     "Receiving DFI Identification":{
+       "start":4,
+       "end":11,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Check digit":{
+       "start":12,
+       "end":12,
+       "type":"number",
+       "pattern":"[0-9]"
+     },
+      "DFI Account number":{
+       "start":13,
+       "end":29,
+       "type":"string",
+       "pattern":"[A-Za-z0-9-\\s]{1,17}"
+     },
+     "Amount":{
+       "start":30,
+       "end":39,
+       "type":"number",
+       "pattern":"[0-9]{1,10}"
+     },
+      "Identification number":{
+       "start":40,
+       "end":54,
+       "type":"string",
+       "pattern":"[A-Za-z0-9]{1,15}"
+     },
+     "Name":{
+       "start":55,
+       "end":76,
+       "type":"string",
+       "pattern":"[A-Za-z0-9]{1,22}"
+     },
+       "Discretionary data":{
+       "start":77,
+       "end":78,
+       "type":"string",
+       "pattern":"[A-Za-z0-9]{1,2}"
+     },
+     "Addenda Record Indicator":{
+       "start":79,
+       "end":79,
+       "type":"number",
+       "pattern":"0|1"
+     },
+    "Trace Number":{
+       "start":80,
+       "end":94,
+       "type":"number",
+       "pattern":"[0-9]{1,15}"
+     }
+    },
+     "8":{
+     "Batch control record type code":{
+       "start":1,
+       "end":1,
+       "type":"string",
+       "pattern":"8"
+     },
+     "Service class Code":{
+       "start":2,
+       "end":4,
+       "type":"number",
+       "pattern":"200|220|225"
+     },
+     "Entry count":{
+       "start":5,
+       "end":10,
+       "type":"number",
+       "pattern":"[0-9]{1,6}"
+     },
+     "Entry Hash":{
+       "start":11,
+       "end":20,
+       "type":"number",
+       "pattern":"[0-9]{1,10}"
+     },
+      "Total Debit Entry Dollar Amount":{
+       "start":21,
+       "end":32,
+       "type":"number",
+       "pattern":"[0-9]{1,12}"
+     },
+     "Total Credit Entry Dollar Amount":{
+       "start":33,
+       "end":44,
+       "type":"number",
+       "pattern":"[0-9]{1,12}"
+     },
+      "Company Identification":{
+       "start":45,
+       "end":54,
+       "type":"string",
+       "pattern":"[A-Za-z0-9]{1,10}"
+     },
+     "Message Authentication Code":{
+       "start":55,
+       "end":73,
+       "type":"string",
+       "pattern":".*"
+     },
+       "Reserved":{
+       "start":74,
+       "end":79,
+       "type":"string",
+       "pattern":".*"
+     },
+     "Originating Financial Instituation ID":{
+       "start":80,
+       "end":87,
+       "type":"string",
+       "pattern":".*"
+     },
+    "Batch Number":{
+       "start":88,
+       "end":94,
+       "type":"number",
+       "pattern":"[0-9]{1,7}"
+     }
+    },
+     "9":{
+     "File control record type code":{
+       "start":1,
+       "end":1,
+       "type":"string",
+       "pattern":"9"
+     },
+     "Batch count":{
+       "start":2,
+       "end":7,
+       "type":"number",
+       "pattern":"[0-9]{1,6}"
+     },
+     "Block count":{
+       "start":8,
+       "end":13,
+       "type":"number",
+       "pattern":"[0-9]{1,6}"
+     },
+     "Entry Count":{
+       "start":14,
+       "end":21,
+       "type":"number",
+       "pattern":"[0-9]{1,8}"
+     },
+      "Entry Hash":{
+       "start":22,
+       "end":31,
+       "type":"number",
+       "pattern":"[0-9]{1,10}"
+     },
+      "Total Debit Entry Dollar Amount":{
+       "start":32,
+       "end":43,
+       "type":"number",
+       "pattern":"[0-9]{1,12}"
+     },
+     "Total Credit Entry Dollar Amount":{
+       "start":44,
+       "end":55,
+       "type":"number",
+       "pattern":"[0-9]{1,12}"
+     },     
+       "Reserved":{
+       "start":56,
+       "end":94,
+       "type":"string",
+       "pattern":".*"
+     }
+    }
+    
+    
+}
